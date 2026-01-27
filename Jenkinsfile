@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Code') {
-            steps {
-                // Replace with your GitHub repository URL
-                git branch: 'main', url: 'https://github.com/THOUFI-ui/2nd-TIER.git'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t flask-app:latest .'
