@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two‑Tier Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Users List</h1>
+
+    <div class="container">
+        <ul>
+            {% for user in users %}
+                <li>{{ user.name }}</li>
+            {% else %}
+                <li>No users found in the database.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
+
